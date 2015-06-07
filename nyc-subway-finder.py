@@ -15,7 +15,6 @@ def main():
         approaching_trains = findTrains(direction, station, trains)
         interface.showApproachingTrains(station, approaching_trains)
         keepGoing = interface.againOrQuit()
-    interface.closeMap()
 
 def findTrains(direction, station, trains):
     """Given a desired direction of travel, station, and the master train list, this
