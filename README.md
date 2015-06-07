@@ -21,7 +21,6 @@ and stops. To launch the program, run the nyc-subway-finder.py file.
 - Simple prompts to help the user find which train they are looking for
 - When the user input matches more than one station, the user can pick from a
 list of possible stations
-- Displays a map of the subway system in Manhattan for quick reference
 - Provides the option to search again or quit after each search
 
 # Detailed program breakdown:
@@ -41,6 +40,5 @@ expression methods to match user inputs to official station names.
 Finally, our view is the interfaces.py program that puts all of the information
 out there for the user to see. It consists of a TextInterface class, which
 contains code that aks for and receives user input and passes it back to the
-controller. This class also has methods for displaying a map of the subway
-system and asking the user whether they want to do another search or exit the
-program.
+controller. This class also has methods for  asking the user whether they want
+to do another search or exit the program.
