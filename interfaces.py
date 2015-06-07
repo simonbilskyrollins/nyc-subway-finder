@@ -1,17 +1,14 @@
 import sys
-from cImage import *
 
 class TextInterface:
-    """Text-based interface that contains methods for getting input from the user, displaying search
-    results, and opening and closing the map.
+    """Text-based interface that contains methods for getting input from the user and displaying search
+    results.
     """
     
     def __init__(self, trains_list):
-        """Initializes the TextInterface object with a list of all train objects in the simulation
-        and opens a window with a map of the subway system in it.
+        """Initializes the TextInterface object with a list of all train objects in the simulation.
         """
         self.trains = trains_list
-        self.showMap()
     
     def getUserInput(self):
         """This method prompts the user to specify a direction of travel and a station at which
@@ -88,16 +85,4 @@ class TextInterface:
             return False
         else:
             print "We didn't understand that. Please try again."
-            return self.againOrQuit()    
-
-    def showMap(self):
-        """Creates a 420x800 window and draws a map of the subway system inside.
-        """
-        self.mapWindow = ImageWin("New York City Subway - Manhattan", 420, 800)
-        mapImage = FileImage("subwaymap.gif")
-        mapImage.draw(self.mapWindow)
-    
-    def closeMap(self):
-        """Closes the map window created in showMap()
-        """
-        self.mapWindow._close()
+            return self.againOrQuit()
